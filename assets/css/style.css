@@ -1,0 +1,163 @@
+
+
+header {
+    background-color:aliceblue;
+    color: black;
+    padding: 20px 0;
+    box-shadow: 0 1px 5px rgb(203, 208, 212);
+}
+nav a {
+    color:black;
+    font-size: larger;
+    text-decoration: none;
+    margin-left: 20px;
+    box-shadow: 0 4px 5px aliceblue;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+
+.image {
+    display: flex;
+    justify-content: center; /* Horizontally center content */
+    align-items: center;
+    width: 500px; /* Adjust width as needed */
+    height: auto; /* Adjust height as needed */
+    border: 4px solid aliceblue; /* Border color */
+    border-radius: 50px; /* Rounded corners */
+    overflow: hidden; /* Hide any overflowing content */
+    box-shadow: 0 4px 8px whitesmoke; /* Box shadow */
+}
+
+
+
+/* Style the image */
+.image img {
+    width: 100%; /* Ensure the image doesn't exceed the container width */
+    height:auto; /* Ensure the image doesn't exceed the container height */
+    border-radius: 10px; /* Rounded corners */
+    transition: transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* Hover effect for the image */
+.image img:hover {
+    transform: scale(1.05);
+}
+
+
+.centered-text h1 {
+    font-size:  50px;;
+    font-family:'Segoe UI';
+    color:aliceblue;
+    text-align: center;
+
+}
+.centered-text:hover{
+    transform: scale(1.05);
+}
+
+.social-media-buttons {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color:aliceblue;
+    padding: 22px 0;
+    box-shadow: 0 -2px 5px rgb(203, 208, 212); /* Add shadow */
+    z-index: 9999; /* Ensure it appears above other content */
+    text-align: center; /* Center-align the buttons */
+}
+
+.social-button {
+    display: inline-block; /* Ensure inline display */
+    margin: 0 10px; /* Add spacing between buttons */
+}
+
+.social-button img {
+    width: 35px; /* Set width of social media icons */
+    height: auto; /* Maintain aspect ratio */
+    
+}
+.social-button:hover {
+    transform: scale(1.1); /* Scale the button on hover */
+}
+
+.contact {
+    position: fixed; /* Set fixed positioning */
+    bottom: 0; /* Align at the bottom */
+    right: 0; /* Align at the left */
+    padding-right: 10px;
+    z-index: 9999;
+    text-align:left;
+}
+.contact:hover{
+    text-decoration: underline;
+}
+
+
+.container {
+    display: flex;
+    max-width: 1200px; /* Set maximum width for the container */
+    margin: 0 auto; /* Center the container horizontally */
+}
+
+.left-half, .right-half {
+    flex: 1; /* Each half takes up equal space */
+}
+
+.left-half {
+     font-size: xx-large;
+     color: aliceblue;
+     text-align: justify;
+}
+
+
+
+/* Define the initial state of the elements */
+header,
+.centered-text .arpit,
+.container .left-half,
+.container .right-half,
+.social-media-buttons,
+.contact {
+    opacity: 0;
+}
+
+/* Define the fade-in animation */
+@keyframes fade-in {
+    from {
+        opacity: 0; /* Start with opacity 0 */
+    }
+    to {
+        opacity: 1; /* Transition to opacity 1 */
+    }
+}
+
+/* Apply the animation to the elements */
+body,header,
+.centered-text .arpit,
+.container .left-half,
+.container .right-half,
+.social-media-buttons,
+.contact {
+    animation: fade-in 1s ease forwards; /* Apply the fade-in animation with a duration of 1 second */
+}
+body {
+    margin: 0;
+
+    background-image: url("/assets/img/bgmain.jpg");
+    background-size: cover;
+    background-position: center;
+    opacity: 0.1;
+    
+}
+
+.container {
+    position: relative;
+}
+
+
+
+/* Rest of your CSS styles */

@@ -1,0 +1,118 @@
+
+.nav1{
+    background-color:aliceblue;
+    color: black;
+    padding: 20px 0;
+    box-shadow: 0 2px 5px aliceblue;
+    text-align: center;
+}
+.nav1:hover{
+    text-decoration:underline;
+}
+.anim{
+    font: size 150px;;
+    transition: font-size 0.3s ease-in-out;
+}
+.anim:hover{
+    font-size: 50px;
+}
+.content{
+    text-align: center;
+}
+.background-container {
+    background-image: url("/assets/img/bg.jpg");
+    background-size:cover;
+    background-position: center;
+    height:741px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.background-container::before {
+    content: '';
+    position: absolute;
+    top: 90px;
+    bottom: 80px;
+    width: 100%;
+    height:auto;
+    background-color: rgba(255, 255, 255, 0.5); /* Adjust opacity here */
+}
+
+.content {
+    z-index: 1; /* Ensure content appears above the background */
+    color: black; /* Set text color to white or another contrasting color */
+}
+.background-container1 {
+    background-size:contain;
+    background-position: center;
+    height:700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+.background-container1::before {
+    content: '';
+    position: absolute;
+    top: 90px;
+    bottom: 130px;
+    width: 100%;
+    height:auto;
+    background-color:black; /* Adjust opacity here */
+}
+
+.content1 {
+    z-index: 1; /* Ensure content appears above the background */
+    color: black; /* Set text color to white or another contrasting color */
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    overflow: hidden;
+    
+    
+}
+
+.nav1 {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.p1 {
+    margin: 0;
+}
+
+.background-container {
+    text-align: center;
+    opacity: 0;
+    animation: fade-in 1s forwards;
+}
+
+.content {
+    margin-top: 50px;
+}
+
+.anim {
+    opacity: 0;
+    animation: fade-in 1s forwards;
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

@@ -1,0 +1,110 @@
+.p1{
+    font-size:x-large;
+    font-family:'Times New Roman', Times, serif;
+    font-weight: 900;
+    font-size: 30px;
+}
+.nav1{
+    background-color:aliceblue;
+    color: black;
+    padding: 20px 0;
+    box-shadow: 0 2px 5px aliceblue;
+    text-align: center;
+}
+.nav1:hover{
+    text-decoration:underline;
+}
+.anim{
+    font: size 150px;;
+    transition: font-size 0.3s ease-in-out;
+}
+.anim:hover{
+    font-size: 50px;
+}
+.content1{
+    text-align:left;
+    margin-left: 20px;
+}
+
+.background-container::before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    bottom: 10px;
+    width: 100%;
+    height:auto;
+    background-color: rgba(99, 35, 35, 0.5); /* Adjust opacity here */
+    overflow: hidden;
+}
+
+.content {
+    z-index: 1; /* Ensure content appears above the background */
+    color: black; /* Set text color to white or another contrasting color */
+}
+.background-container1 {
+    background-image: url("/assets/img/bg3.jpg");
+    background-size:contain;
+    background-position: center;
+    height:750px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+.background-container1::before {
+    content: '';
+    position: absolute;
+    top:180px;
+    bottom: 120px;
+    width: 100%;
+    height:auto;
+    background-color: rgba(255, 255, 255, 0.9); /* Adjust opacity here */
+}
+
+.content1 {
+    z-index: 1; /* Ensure content appears above the background */
+    color: black; /* Set text color to white or another contrasting color */
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+}
+
+.nav1 {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.p1 {
+    margin: 0;
+}
+
+.background-container {
+    text-align: center;
+    opacity: 0;
+    animation: fade-in 1s forwards;
+}
+
+.content {
+    margin-top: 50px;
+}
+
+.anim {
+    opacity: 0;
+    animation: fade-in 0.5s forwards;
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
